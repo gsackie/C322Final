@@ -1,11 +1,7 @@
 name: Docker Image CI for GHCR
 
 on:
-  push:
-   branches:
-     - master
-
-
+  push
 jobs:
   build_and_publish:
     runs-on: ubuntu-latest
@@ -38,5 +34,4 @@ jobs:
         run: |
           docker login --username gsackie --password ${{secrets.ACCESS_TOKEN}} ghcr.io
           docker build -t ghcr.io/gsackie/final:latest --file Dockerfile .  
-          docker push ghcr.io/gsackie/final:latest 
-
+          docker push ghcr.io/gsackie/final:latest
