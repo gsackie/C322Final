@@ -23,10 +23,12 @@ CREATE TABLE IF NOT EXISTS flowers.order (
     price NUMERIC NOT NULL
 );
 
-INSERT INTO flowers.flower (id, name, price) VALUES
-(1, 'Sugar Rush', 54),
-(2, 'Lemonade', 54),
-(3, 'The Angels', 54),
-(4, 'unbreakable', 59),
-(5, 'Sierra Sunset', 59),
-(6, 'Casablanca', 59);
+TRUNCATE TABLE flowers.flower;
+
+INSERT INTO flowers.flower (name, price) VALUES
+('Sugar Rush', 54),
+('Lemonade', 54),
+('The Angels', 54),
+('unbreakable', 59),
+('Sierra Sunset', 59),
+('Casablanca', 59);
