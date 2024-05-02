@@ -1,18 +1,28 @@
 package edu.iu.gsackie.C322Final.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(schema = "flowers", name = "flower")
 public class Flower {
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
-    private String image;
-    private double price;
-    private String type;
 
-    public Flower(int id, String name, String image, double price, String type) {
+    private double price;
+
+    public Flower() {
+    }
+
+
+    public Flower(int id, String name, double price) {
         this.id = id;
         this.name = name;
-        this.image = image;
         this.price = price;
-        this.type = type;
     }
 
     public int getId() {
@@ -32,13 +42,6 @@ public class Flower {
         this.name = name;
     }
 
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
 
     public double getPrice() {
         return price;
@@ -47,4 +50,9 @@ public class Flower {
     public void setPrice(double price) {
         this.price = price;
     }
+
+
+
+
+
 }

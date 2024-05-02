@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-copg235jm4es73a3fbpg-a.oregon-postgres.render.com:5432/flower_a8tz
+    username: flower_a8tz_user
+    password: XYpp6sWH5Mue7sNQjSMRYlVVsDXlHQvs
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  sql:
+    init:
+      mode: always
+
+  security:
+    user:
+      name: guest
+      password: french
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
